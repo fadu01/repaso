@@ -47,7 +47,7 @@ if (login()) {
     let precioEnvio = 500;
 
     let opcionCompra = prompt('Elegi que queres comprar: \n1 - Comic \n2 - Funko \n3 - Cartas \nx - Salir')
-
+    
     switch (opcionCompra) {
         case '1':
             alert('Elegiste Comic');
@@ -72,4 +72,7 @@ if (login()) {
             alert("Opcion no disponible");
             break;
     }
+    alert('Gracias por su compra!')
+} else{
+    alert('Usuario bloqueado. Revise su casilla de mail para restablecer.')
 }
