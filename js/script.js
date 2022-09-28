@@ -12,7 +12,7 @@ function login() {
 
         if (user === savedUser && userPass === savedPass) {
 
-            alert('Usuario logueado exitosamente. Hola fadu');
+            alert('Usuario logueado exitosamente. Hola ' + savedUser +'!');
             ingresar = true;
             break;
 
@@ -48,31 +48,28 @@ if (login()) {
 
     let opcionCompra = prompt('Elegi que queres comprar: \n1 - Comic \n2 - Funko \n3 - Cartas \nx - Salir')
 
-    while (opcionCompra != 'X' && opcionCompra != 'x') {
+    switch (opcionCompra) {
+        case '1':
+            alert('Elegiste Comic');
+            alert('El costo del producto es ' + precioComic);
+            alert('El costo del envio es ' + precioEnvio);
+            alert('El costo total del producto es ' + precioTotal(precioComic, precioEnvio));
+            break;
+        case '2':
+            alert('Elegiste Funko');
+            alert('El costo del producto es ' + precioFunko);
+            alert('El costo del envio es ' + precioEnvio);
+            alert('El costo total del producto es ' + precioTotal(precioFunko, precioEnvio));
+            break;
+        case '3':
+            alert('Elegiste Cartas');
+            alert('El costo del producto es ' + precioCartas);
+            alert('El costo del envio es ' + precioEnvio);
+            alert('El costo total del producto es ' + precioTotal(precioCartas, precioEnvio));
+            break;
 
-        switch (opcionCompra) {
-            case '1':
-                alert('Elegiste Comic');
-                alert('El costo del producto es ' + precioComic);
-                alert('El costo del envio es ' + precioEnvio);
-                alert('El costo total del producto es ' + precioTotal(precioComic, precioEnvio));
-                break;
-            case '2':
-                alert('Elegiste Funko');
-                alert('El costo del producto es ' + precioFunko);
-                alert('El costo del envio es ' + precioEnvio);
-                alert('El costo total del producto es ' + precioTotal(precioFunko, precioEnvio));
-                break;
-            case '3':
-                alert('Elegiste Cartas');
-                alert('El costo del producto es ' + precioCartas);
-                alert('El costo del envio es ' + precioEnvio);
-                alert('El costo total del producto es ' + precioTotal(precioCartas, precioEnvio));
-                break;
-
-            default:
-                alert("Opcion no disponible");
-                break;
-        }
+        default:
+            alert("Opcion no disponible");
+            break;
     }
 }
