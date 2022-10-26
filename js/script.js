@@ -25,49 +25,49 @@ const fetchData = () => {
             "precio": 2000,
             "id": 1,
             "title": "Aquaman #64",
-            "thumbnailUrl": "./img/aquaman-n64.jpg"
+            "imagen": "./img/aquaman-n64.jpg"
         },
         {
             "precio": 3000,
             "id": 2,
             "title": "Daredevil #11",
-            "thumbnailUrl": "./img/daredevil-n11.jpg"
+            "imagen": "./img/daredevil-n11.jpg"
         },
         {
             "precio": 3000,
             "id": 3,
             "title": "Deadpool #15",
-            "thumbnailUrl": "./img/deadpool-n15.jpg"
+            "imagen": "./img/deadpool-n15.jpg"
         },
         {
             "precio": 4500,
             "id": 4,
             "title": "Defenders #1",
-            "thumbnailUrl": "./img/defenders-n1.jpg"
+            "imagen": "./img/defenders-n1.jpg"
         },
         {
             "precio": 2500,
             "id": 5,
             "title": "Dr. Strange #2",
-            "thumbnailUrl": "./img/drstrange-n2.jpg"
+            "imagen": "./img/drstrange-n2.jpg"
         },
         {
             "precio": 3500,
             "id": 6,
             "title": "Invencible Vol.3",
-            "thumbnailUrl": "./img/invincible-vol3.jpg"
+            "imagen": "./img/invincible-vol3.jpg"
         },
         {
             "precio": 2000,
             "id": 7,
             "title": "The Boys #16",
-            "thumbnailUrl": "./img/theboys-n16.jpg"
+            "imagen": "./img/theboys-n16.jpg"
         },
         {
             "precio": 1500,
             "id": 8,
             "title": "Walking Dead #163",
-            "thumbnailUrl": "./img/thewalkingdead-n163.jpg"
+            "imagen": "./img/thewalkingdead-n163.jpg"
         }
     ]
     pintarCards(data)
@@ -78,7 +78,7 @@ const pintarCards = data => {
     data.forEach(item => {
         templateCard.querySelector('h5').textContent = item.title
         templateCard.querySelector('p').textContent = item.precio
-        templateCard.querySelector('img').setAttribute("src", item.thumbnailUrl)
+        templateCard.querySelector('img').setAttribute("src", item.imagen)
         templateCard.querySelector('button').dataset.id = item.id
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
